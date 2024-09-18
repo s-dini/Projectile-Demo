@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
+
 def plot_graph(velocity_initial, angle, initial_position, ax, title="Graph", xlabel="X-axis", ylabel="Y-axis", line_style="-", color="blue", marker=None, show=False):
     t = np.linspace(0, 10, endpoint=True)
     X = ReturnX(velocity_initial, angle, initial_position[0], t) 
