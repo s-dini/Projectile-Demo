@@ -22,6 +22,8 @@ def create_dictionary( en_key ):
 cont = True
 
 while (cont):
+    
+    print("")
     response1 = input("Would you like to encrypt or decrypt a word? (You must know the encryption key for both!)(Y/N) ").upper()
 
     if (response1 == "N"):
@@ -29,11 +31,14 @@ while (cont):
         break
 
     elif (response1 == "Y"):
+        
+        print("")
         response2 = input("Encrypt or Decrypt? (E/D) ").upper()
 
         if (response2 == "E"):
 
             print("")
+
             encryption_key = int ( input("Enter an encryption key. ") )
             encrypted_text = ""
 
@@ -63,7 +68,7 @@ while (cont):
             encryption_key = int ( input("Enter an encryption key. ") )
             encrypted_text = ""
 
-            caesar = create_dictionary(encryption_key)
+            caesar = create_dictionary(-encryption_key)
 
             print("")
             text = input("Enter your text to decrypt: ").upper()
